@@ -1,80 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pooja Lohani | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+
+
+        .header {
+            background-color: rgb(153, 80, 142);
+            /* border: 5px solid rgb(164, 237, 146); */
+            width: 100vw;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+
+        .name {
+            display: flex;
+            flex-basis: 200px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .nav {
+            flex-basis: 500px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .header img {
+            height: 40PX;
+            width: 40PX;
+            border-radius: 180%;
+
+        }
+
+        .header h2 {
+            font-size: medium;
+            color: aliceblue;
+
+        }
+
+        .header h3 {
+            font-size: medium;
+            color: aliceblue;
+        }
+
+        h4 {
+            color: rgb(153, 80, 142);
+            font-size: 20px;
+            margin-bottom: 8px;
+            border-bottom: 2px solid darkcyan;
+            display: inline-block;
+            padding-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+
+        .outer {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+            display: grid;
+            align-items: center;
+            gap: 5px;
+
+        }
+
+        #about {
+            grid-area: 1/1/2/3;
+        }
+
+        #projects {
+            grid-area: 2/1/3/2;
+        }
+
+        #skills {
+            grid-area: 2/2/3/3;
+        }
+
+        #exp {
+            grid-area: 3/1/4/3;
+        }
+
+        #education {
+            grid-area: 4/1/5/3;
+        }
+
+        #contact {
+            grid-area: 5/1/6/3;
+        }
+
+        .div {
+            border: none;
+            background-color: #ffffff;
+            margin: 10px auto;
+            padding: 15px 20px;
+            width: 85%;
+            border-radius: 10px;
+        }
+
+
+        p {
+            background-color: #f7f9fa;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            padding-top: 6px;
+            line-height: 1.6;
+
+        }
+         form {
+     margin-top: 10px;
+ }
+ input,
+ textarea {
+     width: 100%;
+     padding: 8px;
+     margin-top: 6px;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+     font-size: 15px;
+ }
+ button {
+     margin-top: 10px;
+     background-color: rgb(153, 80, 142);
+     color: white;
+     padding: 10px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+ button:hover {
+     background-color: rgb(122, 61, 112);
+ }
+
+
+        /* for smaller or mobile view devices */
+        @media screen and (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                height: 230px;
+                padding: 5px 0;
+                background-color: burlywood;
+            }
+
+            .name {
+                flex-direction: column;
+                flex-basis: 70px;
+            }
+
+            .header img {
+                height: 50px;
+                width: 50px;
+            }
+
+            .header h2 {
+                font-size: 18px;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+                flex-basis: 20px;
+            }
+
+            .nav a h2 {
+                font-size: 16px;
+            }
+
+            .div {
+                width: 90%;
+                padding: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            h4 {
+                font-size: 18px;
+            }
+
+            .outer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            form {
+                margin-top: 10px;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 8px;
+                margin-top: 6px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                font-size: 15px;
+            }
+
+            button {
+                margin-top: 10px;
+                background-color: rgb(153, 80, 142);
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: rgb(122, 61, 112);
+            }
+
+        }
+    </style>
 </head>
+
 <body>
-
-  <header class="top-section">
-    <div class="intro">
-      <img src="PoojaProfile.jpg" alt="Pooja Lohani" class="profile-photo">
-      <div class="intro-text">
-        <h1>Hi, I’m <span class="highlight-name">Pooja Lohani</span></h1>
-        <p class="role">Software Developer | QA Engineer | Problem Solver</p>
-        <p class="place"> Based in Scarborough, ON (open to relocate within Canada)</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/pooja-lohani-22826b184/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/pooja02082020/" target="_blank">GitHub</a>
-          <a href="mailto:lohanipooja77@gmail.com">Email Me</a>
+    <header class="header">
+        <div class="name"><img src="images/PoojaProfile.jpg" alt="POOJA LOHANI">
+            <h2>POOJA LOHANI</h2>
         </div>
-      </div>
+        <div class="nav">
+            <a href="https://www.linkedin.com/in/pooja-lohani-22826b184/" target="_blank">
+                <h2>LinkedIn</h2>
+            </a>
+            <a href="https://github.com/pooja02082020/" target="_blank">
+                <h2>GitHub</h2>
+            </a>
+            <a href="mailto:lohanipooja77@gmail.com">
+                <h2>Email Me</h2>
+            </a>
+        </div>
+    </header>
+    <div class="outer">
+        <div class="div" id="about">
+            <h4>ABOUT ME</h4>
+            <p>
+                Passionate and detail-oriented Software Developer with a strong foundation in Quality Assurance and Full
+                Stack Development.<br> Experienced in building and testing scalable web applications using Java,
+                JavaScript,
+                and modern frameworks.<br> A quick learner and team player dedicated to delivering high-quality,
+                user-focused solutions that make real impact.
+            </p>
+        </div>
+
+        <div class="div" id="projects">
+            <h4>PROJECTS</h4>
+            <p><strong>SneakPeak | Lambton College (May 2024 - Aug 2024)</strong><br>
+                • Built a small business management web app using HTML, CSS, JavaScript, and MongoDB.<br>
+                • Implemented CRUD features, responsive UI, and a data tracking dashboard.<br>
+                • Collaborated in Agile sprints using GitHub for version control.</p>
+
+            <p><strong>Batch Report Creator | Cotiviti Nepal (Nov 2021 - Nov 2022)</strong><br>
+                • Automated report generation and data validation through custom scripts.<br>
+                • Optimized SQL queries to enhance backend performance and accuracy.</p>
+        </div>
+
+        <div class="div" id="skills">
+            <h4>SKILLS</h4>
+            <p><strong>Technical Skills</strong><br>
+                Languages: Java, Python, JavaScript<br>
+                Web Technologies: HTML5, CSS3, React, Node.js, MongoDB<br>
+                Tools: Git, GitHub, Jenkins, Postman, Selenium, JIRA, Confluence, Azure, AWS<br>
+                Methodologies: Agile, Scrum</p>
+
+            <p><strong>Soft Skills</strong><br>
+                Strong communication, teamwork, and problem-solving abilities. Organized, adaptable, and committed to
+                continuous learning.</p>
+
+            <p><strong>Certifications</strong><br>
+                • AWS Certified Cloud Practitioner (Expected Oct 2025 - Valid till 2028)<br>
+                • ISTQB Certified Tester - Foundation Level (Apr 2022)<br>
+                • SAFe for Teams (Jul 2021 - Aug 2022)</p>
+
+            </p>
+        </div>
+        <div class="div" id="exp">
+            <h4>EXPERIENCE</h4>
+            <p><strong>Software Engineering Co-op | Seed NanoTech International Inc. (Aug 2024 - Dec 2024)</strong><br>
+                • Improved front-end and back-end functionality for the ICAPMOT research platform.<br>
+                • Created interactive features using JavaScript, HTML, and CSS.<br>
+                • Assisted in database structuring and optimizing data retrieval.<br>
+                • Wrote Selenium test scripts to ensure quality before deployment.<br>
+                • Collaborated on debugging and CI/CD integration with Git.</p>
+
+            <p><strong>Software QA Engineer | Cotiviti Nepal Pvt. Ltd. (Aug 2020 - Mar 2023)</strong><br>
+                • Automated test cases using Java and Selenium WebDriver.<br>
+                • Worked with APIs and SQL queries to verify backend data.<br>
+                • Strengthened QA processes, reducing production bugs by 40%.<br>
+                • Supported Agile sprint activities and collaborated on feature reviews.</p>
+
+            <p><strong>Trainee Engineer | Cotiviti Nepal Pvt. Ltd. (Jan 2020 - Mar 2020)</strong><br>
+                • Gained hands-on experience in debugging and SDLC workflows.<br>
+                • Supported development and QA teams with Java-based tools.</p>
+
+
+        </div>
+        <div class="div" id="education">
+            <h4>EDUCATION</h4>
+
+            <p><strong>Postgraduate Diploma – Full Stack Software Development</strong><br>
+                Lambton College, North York, ON (May 2023 – Dec 2024)</p>
+
+            <p><strong>Bachelor of Computer Engineering</strong><br>
+                Khwopa Engineering College, Bhaktapur, Nepal (Nov 2014 - Aug 2018)</p>
+
+
+        </div>
+
+        <div class="div" id="contact">
+
+            <h4>Contact</h4>
+            <p>If you’d like to connect or provide feedback, feel free to reach out!</p>
+            <form>
+                <!-- onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent.'); this.reset();" -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..."
+                    required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </div>
-  </header>
-
-  <section class="about-section">
-    <h2>About Me</h2>
-    <p>
-      I’m a software engineer who enjoys turning ideas into working applications.
-      I started my career in Quality Assurance, where I learned the importance of precision,
-      collaboration, and building reliable systems. Over time, I discovered my passion
-      for coding and problem-solving, which led me to study Full Stack Software Development at Lambton College.
-    </p>
-    <p>
-      I’m comfortable working on both the frontend and backend and enjoy learning new tools
-      that make development faster and cleaner. My goal is to grow as a developer while contributing to meaningful projects.
-    </p>
-  </section>
-
-  <section class="project-section">
-    <h2>Projects</h2>
-    <div class="project-item">
-      <h3>SneakPeak</h3>
-      <p>A small business management app built with HTML, CSS, JavaScript, and MongoDB. It helps users track their data efficiently and view reports through a simple dashboard.</p>
-    </div>
-
-    <div class="project-item">
-      <h3>Batch Report Creator</h3>
-      <p>A tool developed during my time at Cotiviti Nepal to automate data validation and report generation, improving accuracy and performance for healthcare clients.</p>
-    </div>
-
-    <div class="project-item">
-      <h3>ICAPMOT Website</h3>
-      <p>Contributed to the research-focused ICAPMOT site at Seed NanoTech, where I worked on dynamic search functionality, UI improvements, and overall site responsiveness.</p>
-    </div>
-  </section>
-
-  <section class="skills-section">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Languages: Java, JavaScript, Python, SQL</li>
-      <li>Frameworks & Tools: Selenium, Postman, Jenkins, Git, MongoDB</li>
-      <li>Cloud & DevOps: AWS, Azure, CI/CD</li>
-      <li>Web: HTML5, CSS3, React</li>
-    </ul>
-  </section>
-
-  <section class="contact-section">
-    <h2>Get in Touch</h2>
-    <p>If you’d like to connect or discuss opportunities, feel free to reach out!</p>
-    <p><strong>Email:</strong> <a href="mailto:lohanipooja77@gmail.com">lohanipooja77@gmail.com</a></p>
-  </section>
-
-  <footer class="bottom-section">
-    <p>© 2025 Pooja Lohani</p>
-  </footer>
-
 </body>
+
 </html>
