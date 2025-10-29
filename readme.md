@@ -17,13 +17,6 @@ A personal portfolio website showcasing my projects, skills, and experience. Bui
 1. Clone or download the repository.  
 2. Open `index.html` in your browser.  
 
-## 👩‍💻 Author
-**Pooja Lohani**  
-[LinkedIn](https://www.linkedin.com/in/pooja-lohani-22826b184/) | [GitHub](https://github.com/pooja02082020)
-## 💻 How to View
-1. Clone or download the repository.  
-2. Open `index.html` in your browser. 
-
 ## 📂 Folder Structure
 index.html
 style.css
